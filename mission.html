@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Auckland Council</title>
+</head>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="dist/css/animate.css">
+<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+<link rel="stylesheet" href="dist/css/leaflet.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/style.css">
+
+<body>
+    <div id="map"></div>
+    <!-- Top Segment -->
+    <div class="row nav">
+        <div id="custom-search-input">
+            <div class="input-group col-md-12">
+                <input type="text" class="form-control input-lg" placeholder="Search" />
+                <span class="input-group-btn">
+                    <button class="btn btn-info btn-sm" type="button">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+            </div>
+        </div>
+        <div class="col-sm-1 border top"><i class="fa fa-bars hamburger" aria-hidden="true"></i>
+        </div>
+        <!-- Social Media Icons -->
+        <!-- <div class="col-sm-11 border top icons">
+            <a href="https://twitter.com/AklCouncil" target="blank"><i class="fa fa-twitter social-media" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/aklcouncil/" target="blank"><i class="fa fa-facebook social-media" aria-hidden="true"></i></a>
+        </div> -->
+        <div class="suburb">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Suburb</button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="main.html">Takapuna</a>
+                <a class="dropdown-item" href="mission.html">Mission Bay</a>
+                <a class="dropdown-item" href="mteden.html">Mt Eden</a>
+            </div>
+        </div>
+         <h4>Mission Bay</h4>
+    </div>
+
+    <!-- dropdown menu -->
+    <div id="dropdown"> 
+        <!-- List Item 1 -->
+        <div class="row item" id="accommodation">
+            <div class="col-sm-3 list-item">
+                <div class="button flex accommodation"><i class="fa fa-bed list-icon" aria-hidden="true"></i>
+                    <h4>Accommodation</h4></div>
+            </div>
+        </div>
+        <!-- List Item 2 -->
+        <div class="row item" id="eateries">
+            <div class="col-sm-3 list-item">
+                <div class="button flex eateries"><i class="fa fa-cutlery list-icon" aria-hidden="true"></i>
+                    <h4>Eateries</h4></div>
+            </div>
+        </div>
+        <!-- List Item 3 -->
+        <div class="row item" id="nightlife">
+            <div class="col-sm-3 list-item">
+                <div class="button flex nightlife"><i class="fa fa-glass list-icon" aria-hidden="true"></i>
+                    <h4>Bars & Nightlife</h4></div>
+            </div>
+        </div>
+        <!-- List Item 4 -->
+        <div class="row item" id="shopping">
+            <div class="col-sm-3 list-item">
+                <div class="button flex shopping"><i class="fa fa-shopping-bag list-icon" aria-hidden="true"></i>
+                    <h4>Shopping</h4></div>
+            </div>
+        </div>
+        <!-- List Item 5 -->
+        <div class="row item" id="transport">
+            <div class="col-sm-3 list-item">
+                <div class="button flex transport"><i class="fa fa-bus list-icon" aria-hidden="true"></i>
+                    <h4>Transport</h4></div>
+            </div>
+        </div>
+        <!-- List Item 6 -->
+        <div class="row item" id="poi">
+            <div class="col-sm-3 list-item">
+                <div class="button flex poi"><i class="fa fa-star list-icon" aria-hidden="true"></i>
+                    <h4>Points of Interest</h4></div>
+            </div>
+        </div>
+        <!-- List Item 7 -->
+        <div class="row item" id="education">
+            <div class="col-sm-3 list-item">
+                <div class="button flex education"><i class="fa fa-graduation-cap list-icon" aria-hidden="true"></i>
+                    <h4>Education</h4></div>
+            </div>
+        </div>
+        <!-- List Item 8 -->
+         <div class="row item" id="entertainment">
+            <div class="col-sm-3 list-item">
+                <div class="button flex entertainment"><i class="fa fa-film list-icon" aria-hidden="true"></i>
+                    <h4>Entertainment</h4></div>
+            </div>
+        </div>
+        
+        <!-- List Item 9 -->
+        <!-- <div class="row item" id="events">
+            <div class="col-sm-3 list-item">
+                <div class="button flex events"><i class="fa fa-calendar list-icon" aria-hidden="true"></i>
+                    <h4>Events</h4></div>
+            </div>
+        </div> -->
+    </div>
+    <!-- Social Media Icons -->
+    <div class="soc-med">
+        <a href="https://twitter.com/AklCouncil" target="blank">
+            <div class="twitter">
+                <i class="fa fa-twitter social-media" aria-hidden="true"></i>
+            </div>
+        </a>
+        <a href="https://www.facebook.com/aklcouncil/" target="blank">
+            <div class="facebook">
+                <i class="fa fa-facebook social-media" aria-hidden="true"></i>
+            </div>
+        </a>
+    </div>
+    <!-- Navigation Icons -->
+    <div id="navigation">
+        
+            <div class="col-sm-12 icon-right"> <i class="fa fa-search-plus locations" id="in" aria-hidden="true"></i>
+            </div>
+        
+        
+            <div class="col-sm-12 icon-right"> <i class="fa fa-search-minus locations" id="out" aria-hidden="true"></i>
+            </div>
+       
+       
+            <div class="col-sm-12 icon-right"> <i class="fa fa-compass locations" id="center" aria-hidden="true"></i>
+            </div>
+        
+    </div>
+    <!-- Auckland Council Logo -->
+    <a href="https://www.aucklandcouncil.govt.nz/" target="blank">
+        <img class="logo" src="img/logo.png" alt="Auckland Council">
+    </a>
+
+    <!-- Modal Popup -->
+    <div class="modal fade" id="customModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                <div class="row"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="dist/js/tether.js"></script>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/@mapbox/leaflet-pip@latest/leaflet-pip.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="dist/js/bootstrap.js"></script>
+    <script src="js/bound.js"></script>
+    <script src="js/missionscript.js"></script>
+</body>
+
+</html>
