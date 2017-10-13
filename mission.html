@@ -4,13 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Auckland Council</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="dist/css/animate.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/leaflet.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+    <link rel="stylesheet" href="css/leaflet-routing-machine.css" />
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="dist/css/animate.css">
-<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
-<link rel="stylesheet" href="dist/css/leaflet.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/style.css">
+
 
 <body>
     <div id="map"></div>
@@ -18,7 +22,7 @@
     <div class="row nav">
         <div id="custom-search-input">
             <div class="input-group col-md-12">
-                <input type="text" class="form-control input-lg" placeholder="Search" />
+                <input type="text" class="form-control input-lg" id="autocomplete" placeholder="Search" />
                 <span class="input-group-btn">
                     <button class="btn btn-info btn-sm" type="button">
                         <i class="fa fa-search"></i>
@@ -28,11 +32,6 @@
         </div>
         <div class="col-sm-1 border top"><i class="fa fa-bars hamburger" aria-hidden="true"></i>
         </div>
-        <!-- Social Media Icons -->
-        <!-- <div class="col-sm-11 border top icons">
-            <a href="https://twitter.com/AklCouncil" target="blank"><i class="fa fa-twitter social-media" aria-hidden="true"></i></a>
-            <a href="https://www.facebook.com/aklcouncil/" target="blank"><i class="fa fa-facebook social-media" aria-hidden="true"></i></a>
-        </div> -->
         <div class="suburb">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Suburb</button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -41,7 +40,7 @@
                 <a class="dropdown-item" href="mteden.html">Mt Eden</a>
             </div>
         </div>
-         <h4>Mission Bay</h4>
+        <h4>Mission Bay</h4>
     </div>
 
     <!-- dropdown menu -->
@@ -102,16 +101,9 @@
                     <h4>Entertainment</h4></div>
             </div>
         </div>
-        
-        <!-- List Item 9 -->
-        <!-- <div class="row item" id="events">
-            <div class="col-sm-3 list-item">
-                <div class="button flex events"><i class="fa fa-calendar list-icon" aria-hidden="true"></i>
-                    <h4>Events</h4></div>
-            </div>
-        </div> -->
     </div>
-    <!-- Social Media Icons -->
+
+       <!-- Social Media Icons -->
     <div class="soc-med">
         <a href="https://twitter.com/AklCouncil" target="blank">
             <div class="twitter">
@@ -140,37 +132,64 @@
         
     </div>
     <!-- Auckland Council Logo -->
-    <a href="https://www.aucklandcouncil.govt.nz/" target="blank">
+    <a href="https://www.aucklandcouncil.govt.nz/" target="bla">
         <img class="logo" src="img/logo.png" alt="Auckland Council">
     </a>
+    <div class="display-container">
+        
+    </div>
 
     <!-- Modal Popup -->
-    <div class="modal fade" id="customModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal" id="customModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
+                    
                 </div>
                 <div class="modal-body">
                 </div>
+                <div class="modal-section2">
+                </div>
                 <div class="modal-footer">
-                <div class="row"></div>
+                    <div class="row" id="contact">
+                        <i class="fa fa-globe"></i>
+                        <p id="web"></p>
+                        <i class="fa fa-phone"></i>
+                        <p id="phone"></p>
+                        <i class="fa fa-map-marker"></i>
+                        <p id="street"></p>
+                    </div>
+                    <div id="directions">
+                        <div class="lDirections">
+                            <img id="leaflet-directions" src="img/directions2.jpg" alt="">
+                            <p>Get directions on this map</p>
+                        </div>
+                        <a class="gDirections" target="blank">
+                            <img id="google-directions" src="img/google-map.png" alt="">
+                            <p>Get directions on Google</p>
+                        </a>
+                    </div>               
                 </div>
             </div>
         </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <script src="dist/js/tether.js"></script>
     <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
     <script src="https://unpkg.com/@mapbox/leaflet-pip@latest/leaflet-pip.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://domoritz.github.io/leaflet-locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
     <script src="dist/js/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script>
+    <script src="js/leaflet-routing-machine.js"></script>
     <script src="js/bound.js"></script>
-    <script src="js/missionscript.js"></script>
+    <script src="js/mission.js"></script>
 </body>
 
 </html>

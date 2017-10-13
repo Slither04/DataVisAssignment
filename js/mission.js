@@ -7,28 +7,28 @@ const googleKey = 'AIzaSyB-YvhFo-QJIakIOwNjXgTI5SOJIix8ckU';
 $(function() {
     
     //----GOOGLE URLS----
-        let gAccomURL = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-36.7852,174.7659&radius=2000&type=lodging&key='+googleKey;
-        let gEatURL = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-36.7852,174.7659&radius=2000&type=food&key='+googleKey;
-        let gNightURL = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-36.7852,174.7659&radius=2000&type=bar&key='+googleKey;
-        let gShopURL = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-36.7852,174.7659&radius=2000&type=store&key='+googleKey;
-        let gTransportURL = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-36.7852,174.7659&radius=2000&type=bus_station&key='+googleKey;
-        let gPoiURL = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-36.7852,174.7659&radius=2000&type=point_of_interest&key='+googleKey;
-        let gEducationURL = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-36.7852,174.7659&radius=2000&type=school&key='+googleKey;
-        let gEntertainmentURL = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-36.7852,174.7659&radius=2000&type=movie_rental&key='+googleKey;
+        let gAccomURL = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-36.856556,174.832381&radius=2000&type=lodging&key='+googleKey;
+        let gEatURL = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-36.856556,174.832381&radius=2000&type=food&key='+googleKey;
+        let gNightURL = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-36.856556,174.832381&radius=2000&type=bar&key='+googleKey;
+        let gShopURL = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-36.856556,174.832381&radius=2000&type=store&key='+googleKey;
+        let gTransportURL = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-36.856556,174.832381&radius=2000&type=bus_station&key='+googleKey;
+        let gPoiURL = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-36.856556,174.832381&radius=2000&type=point_of_interest&key='+googleKey;
+        let gEducationURL = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-36.856556,174.832381&radius=2000&type=school&key='+googleKey;
+        let gEntertainmentURL = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-36.856556,174.832381&radius=2000&type=movie_rental&key='+googleKey;
 
     //----FOURSQUARE URLS----
-        let accomURL = 'https://api.foursquare.com/v2/venues/explore'+key+'&ll=-36.7852,174.7659&query=hotel&limit=50&radius=2000';
-        let eatURL = 'https://api.foursquare.com/v2/venues/explore'+key+'&ll=-36.7852, 174.7659&section=food&limit=50&radius=2000';
-        let nightURL = 'https://api.foursquare.com/v2/venues/explore'+key+'&ll=-36.7852, 174.7659&query=bars&limit=50&radius=2000';
-        let shopURL = 'https://api.foursquare.com/v2/venues/explore'+key+'&ll=-36.7852, 174.7659&section=shops&limit=50&radius=2000';
-        let transportURL = 'https://api.foursquare.com/v2/venues/explore'+key+'&ll=-36.7852, 174.7659&query=bus&limit=50&radius=2000';
-        let parkURL = 'https://api.foursquare.com/v2/venues/explore'+key+'&ll=-36.7852, 174.7659&query=parks&limit=50&radius=2000';
-        let beachURL = 'https://api.foursquare.com/v2/venues/explore'+key+'&ll=-36.7852, 174.7659&query=beach&limit=50&radius=2000';
-        let educationURL = 'https://api.foursquare.com/v2/venues/explore'+key+'&ll=-36.7852, 174.7659&query=school+college+education&limit=50&radius=2000';
-        let entertainmentURL = 'https://api.foursquare.com/v2/venues/explore'+key+'&ll=-36.7852, 174.7659&query=fun&limit=50&radius=2000';
+        let accomURL = 'https://api.foursquare.com/v2/venues/explore'+key+'&ll=-36.856556,174.832381&query=hotel&limit=50&radius=2000';
+        let eatURL = 'https://api.foursquare.com/v2/venues/explore'+key+'&ll=-36.856556,174.832381&section=food&limit=50&radius=2000';
+        let nightURL = 'https://api.foursquare.com/v2/venues/explore'+key+'&ll=-36.856556,174.832381&query=bars&limit=50&radius=2000';
+        let shopURL = 'https://api.foursquare.com/v2/venues/explore'+key+'&ll=-36.856556,174.832381&section=shops&limit=50&radius=2000';
+        let transportURL = 'https://api.foursquare.com/v2/venues/explore'+key+'&ll=-36.856556,174.832381&query=bus&limit=50&radius=2000';
+        let parkURL = 'https://api.foursquare.com/v2/venues/explore'+key+'&ll=-36.856556,174.832381&query=parks&limit=50&radius=2000';
+        let beachURL = 'https://api.foursquare.com/v2/venues/explore'+key+'&ll=-36.856556,174.832381&query=beach&limit=50&radius=2000';
+        let educationURL = 'https://api.foursquare.com/v2/venues/explore'+key+'&ll=-36.856556,174.832381&query=school+college+education&limit=50&radius=2000';
+        let entertainmentURL = 'https://api.foursquare.com/v2/venues/explore'+key+'&ll=-36.856556,174.832381&query=fun&limit=50&radius=2000';
 
     //----MAP SETUP----
-        let center = [-36.78529801780085, 174.76595878601074];
+        let center = [-36.856556,174.832381];
         let map = L.map('map', {zoomControl: false }).setView(center, 15);
         let light = L.tileLayer('https://api.mapbox.com/styles/v1/kevinjack/cj7tv1qng1q8c2soer7mhhrii/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoia2V2aW5qYWNrIiwiYSI6ImNqNmxncnVzYzBycGIzMnBkaG5zdGQ3c3cifQ.Q7hR9waEn5UHMWUQ1v4fGQ').addTo(map);
 
@@ -43,67 +43,36 @@ $(function() {
             map.setView(center, 15);
             });
 
-    //----TAKAPUNA POLYGON---- 
-        let takapunaPoly = {
+    //----MISSION BAY POLYGON---- 
+        let missionBayPoly = {
             latlngs: [
-                [-36.77993607001704, 174.74793434143066],
-                [-36.79373545150328, 174.75709676742554],
-                [-36.79535065870498, 174.7591781616211],
-                [-36.79792804647051, 174.76211786270142],
-                [-36.797721858640735, 174.76516485214233],
-                [-36.79634725892455, 174.7668385505676],
-                [-36.79655345045458, 174.7676968574524],
-                [-36.79729229887935, 174.7680401802063],
-                [-36.79718920417815, 174.768705368042],
-                [-36.797275116438776, 174.7690486907959],
-                [-36.79670809373787, 174.76975679397583],
-                [-36.796123884140684, 174.76977825164795],
-                [-36.79596923967795, 174.77089405059814],
-                [-36.79706892685138, 174.7729754447937],
-                [-36.7949554515793, 174.77685928344727],
-                [-36.795848960435535, 174.77761030197144],
-                [-36.79244669792634, 174.78029251098633],
-                [-36.78878651955129, 174.77630138397217],
-                [-36.78662126129863, 174.77503538131714],
-                [-36.785401128504695, 174.77479934692383],
-                [-36.78442157121647, 174.7754430770874],
-                [-36.78473090644969, 174.77630138397217, ],
-                [-36.78440438588912, 174.77673053741455],
-                [-36.78373415511651, 174.77640867233276],
-                [-36.782703019404906, 174.7772240638733],
-                [-36.78218744634638, 174.77692365646362],
-                [-36.780846940161865, 174.77694511413574],
-                [-36.779626715429806, 174.77784633636475],
-                [-36.77873301738629, 174.77763175964355],
-                [-36.777942429661536, 174.7763442993164],
-                [-36.773508112603324, 174.77587223052979],
-                [-36.77199557370019, 174.77402687072754],
-                [-36.77467687222591, 174.77295398712158],
-                [-36.77594014383787, 174.77242827415466],
-                [-36.77575967773931, 174.77149486541748],
-                [-36.776077641532574, 174.7705614566803],
-                [-36.777684627553455, 174.76943492889404],
-                [-36.77711745986356, 174.76810455322266],
-                [-36.77605186073361, 174.7668707370758],
-                [-36.77551905561366, 174.76574420928955],
-                [-36.77534718220434, 174.76428508758545],
-                [-36.77567374135257, 174.76297616958618],
-                [-36.77630966833312, 174.7609806060791],
-                [-36.77704871197962, 174.75954294204712],
-                [-36.77847521793724, 174.75922107696533],
-                [-36.78057196163621, 174.75922107696533],
-                [-36.78041728578198, 174.7580623626709],
-                [-36.77916268120784, 174.75632429122922],
-                [-36.781070359487515, 174.7542428970337],
-                [-36.78263427653083, 174.75297689437866],
-                [-36.78005637424152, 174.7497797012329],
-                [-36.77993607001704, 174.74793434143066]
+                [-36.846160735224245,174.8284435272217],
+                [-36.84736272867651,174.8288297653198],
+                [-36.863879638583235,174.8266839981079],
+                [-36.86377663357458,174.8286581039429],
+                [-36.8647551755506,174.8311257362366],
+                [-36.86518435667426,174.8350954055786],
+                [-36.8617336722161,174.8354601860046],
+                [-36.860720755155015,174.8350954055786],
+                [-36.86042889520515,174.837155342102],
+                [-36.85824849442977,174.8359107971191],
+                [-36.85579332303736,174.8356533050537],
+                [-36.85397335488382,174.8361253738403],
+                [-36.8518271103428,174.8366618156433],
+                [-36.85134634330474,174.837691783905],
+                [-36.849749488229406,174.8381423950195],
+                [-36.84918285421721,174.8390221595764],
+                [-36.84822128385889,174.8391723632812],
+                [-36.84696779005515,174.8360395431519],
+                [-36.84775766525784,174.8349452018738],
+                [-36.84763746738383,174.832820892334],
+                [-36.846160735224245,174.8284435272217]
             ]
         };
 
     //----ADD POLYGONS TO MAP----
-        let polygon = L.polygon(takapunaPoly.latlngs, { color: '#394263', fillColor: '#394263', fillOpacity: 0.2, weight: 1, opacity:0 });
-        let polygonZoom = L.polygon(takapunaPoly.latlngs, { color: '#394263', fillColor: '#394263', fillOpacity: 0, weight: 1, opacity:0 });
+        let polygon = L.polygon(missionBayPoly.latlngs, { color: '#394263', fillColor: '#394263', fillOpacity: 0.2, weight: 1, opacity:0 });
+        let polygonZoom = L.polygon(missionBayPoly.latlngs, { color: '#394263', fillColor: '#394263', fillOpacity: 0, weight: 1, opacity:0 });
         map.addLayer(polygon);
         map.on('zoomend', function(e) {
 
@@ -121,7 +90,7 @@ $(function() {
         });
 
     //----CREATE BOUNDARY FOR SEARCH RESULTS----
-        let suburb = L.geoJSON(takapunaBound, {
+        let suburb = L.geoJSON(missionBayBound, {
             style: function(feature) {
                 return {color: "#394263",fillOpacity:0, opacity:0};
                 }
@@ -154,11 +123,13 @@ $(function() {
 
     //----CALLS GOOGLE URLS----
         function google(url,icon){
+            console.log(url);
             $.ajax({
                 url:'get.php',
                 data:{url:url},
                 dataType:'json',
-                success:function(res){                  
+                success:function(res){ 
+                    console.log(res);                 
                     let data = res.results;
 
                     let venues = _(data).map(function(item){
@@ -247,42 +218,42 @@ $(function() {
                                             });
 
                                         $('.gDirections').attr('href','https://maps.google.com?saddr=Current+Location&daddr='+venue.latlng);
-                                        $('.lDirections').on('click',function(){
+                                        // $('.lDirections').on('click',function(){
                                             
-                                            group.clearLayers();
-                                            let marker = L.marker(venue.latlng,{icon:venueIcon});
-                                            group.addLayer(marker);
-                                            let center = venue.latlng;
-                                            map.locate({setView: true});
+                                        //     group.clearLayers();
+                                        //     let marker = L.marker(venue.latlng,{icon:venueIcon});
+                                        //     group.addLayer(marker);
+                                        //     let center = venue.latlng;
+                                        //     map.locate({setView: true});
                                             
-                                            function onLocationFound(e) {
-                                                var radius = e.accuracy / 2;
-                                                var customMarker = L.icon({
-                                                                        iconUrl:'marker2.svg',
-                                                                        iconSize:[45, 45]
-                                                                        });
-                                                let hereMarker = L.marker(e.latlng,{icon:customMarker}).addTo(map);
-                                                route = L.Routing.control({
-                                                                        waypoints: [
-                                                                            L.latLng(venue.latlng),
-                                                                            L.latLng(e.latlng)
-                                                                        ],
+                                        //     function onLocationFound(e) {
+                                        //         var radius = e.accuracy / 2;
+                                        //         var customMarker = L.icon({
+                                        //                                 iconUrl:'marker2.svg',
+                                        //                                 iconSize:[45, 45]
+                                        //                                 });
+                                        //         let hereMarker = L.marker(e.latlng,{icon:customMarker}).addTo(map);
+                                        //         route = L.Routing.control({
+                                        //                                 waypoints: [
+                                        //                                     L.latLng(venue.latlng),
+                                        //                                     L.latLng(e.latlng)
+                                        //                                 ],
 
-                                                                        createMarker: function() { return null; }                                                   
-                                                                    });
-                                                route.addTo(map);
+                                        //                                 createMarker: function() { return null; }                                                   
+                                        //                             });
+                                        //         route.addTo(map);
 
-                                                let markerArray = [];
-                                                markerArray.push(venue.latlng);
-                                                markerArray.push(e.latlng);
-                                                console.log(markerArray);
-                                                if(markerArray.length>1){
-                                                    map.fitBounds(markerArray,{padding: [80,80]});
-                                                }     
-                                            }
-                                            map.on('locationfound', onLocationFound);
+                                        //         let markerArray = [];
+                                        //         markerArray.push(venue.latlng);
+                                        //         markerArray.push(e.latlng);
+                                        //         console.log(markerArray);
+                                        //         if(markerArray.length>1){
+                                        //             map.fitBounds(markerArray,{padding: [80,80]});
+                                        //         }     
+                                        //     }
+                                        //     map.on('locationfound', onLocationFound);
      
-                                        });
+                                        // });
                                         
                                         $('#customModal').modal('show');
                                     }
@@ -292,6 +263,8 @@ $(function() {
                     });           
                 }
             });
+
+            console.log(icon);
         }
 
     //----CALLS FOURSQUARE URLS----
@@ -438,7 +411,7 @@ $(function() {
             group.clearLayers();
             let keyword = $('.input-lg').val();
             let firstWord = _.first(keyword.split(" "));
-            let gSearchURL = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-36.7852,174.7659&radius=2000&keyword='+firstWord+'&key='+googleKey;
+            let gSearchURL = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-36.856556,174.832381&radius=2000&keyword='+firstWord+'&key='+googleKey;
             google(gSearchURL,'marker2.svg');
         });
 
@@ -447,19 +420,21 @@ $(function() {
                 group.clearLayers();
                 let keyword = $('.input-lg').val();
                 let firstWord = _.first(keyword.split(" "));
-                let gSearchURL = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-36.7852,174.7659&radius=2000&keyword='+firstWord+'&key='+googleKey;
+                let gSearchURL = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-36.856556,174.832381&radius=2000&keyword='+firstWord+'&key='+googleKey;
             google(gSearchURL,'marker2.svg');
             }
         });
 
     //----ADD VENUE MARKERS TO MAP----
         $('#accommodation').on('click',function(){
+            console.log('hi there')
             $('.button').removeClass('hovered');
             $('.accommodation').addClass('hovered');
             group.clearLayers();
             google(gAccomURL,'marker-bed.svg');
+            console.log('how are you?')
             map.setView(center, 15);
-            map.removeControl(route);
+            // map.removeControl(route);
 
         });
         $('#eateries').on('click',function(){
@@ -468,7 +443,7 @@ $(function() {
             group.clearLayers();
             google(gEatURL,'marker-food.svg');
             map.setView(center, 15);
-            route.remove();
+            // route.remove();
         });
         $('#nightlife').on('click',function(){
             $('.button').removeClass('hovered');
