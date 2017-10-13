@@ -459,8 +459,6 @@ $(function() {
             group.clearLayers();
             google(gAccomURL,'marker-bed.svg');
             map.setView(center, 15);
-            map.removeControl(route);
-
         });
         $('#eateries').on('click',function(){
             $('.button').removeClass('hovered');
@@ -468,7 +466,6 @@ $(function() {
             group.clearLayers();
             google(gEatURL,'marker-food.svg');
             map.setView(center, 15);
-            route.remove();
         });
         $('#nightlife').on('click',function(){
             $('.button').removeClass('hovered');

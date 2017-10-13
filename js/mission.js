@@ -123,13 +123,11 @@ $(function() {
 
     //----CALLS GOOGLE URLS----
         function google(url,icon){
-            console.log(url);
             $.ajax({
                 url:'get.php',
                 data:{url:url},
                 dataType:'json',
-                success:function(res){ 
-                    console.log(res);                 
+                success:function(res){                
                     let data = res.results;
 
                     let venues = _(data).map(function(item){
@@ -165,7 +163,6 @@ $(function() {
                                     data:{url:venueURL},
                                     dataType:'json',
                                     success:function(res){
-                                        console.log(res);
                                         $('.modal-title').empty();
                                         $('.modal-body').empty();
                                         $('.modal-section2').empty();
@@ -263,8 +260,6 @@ $(function() {
                     });           
                 }
             });
-
-            console.log(icon);
         }
 
     //----CALLS FOURSQUARE URLS----
@@ -427,15 +422,11 @@ $(function() {
 
     //----ADD VENUE MARKERS TO MAP----
         $('#accommodation').on('click',function(){
-            console.log('hi there')
             $('.button').removeClass('hovered');
             $('.accommodation').addClass('hovered');
             group.clearLayers();
             google(gAccomURL,'marker-bed.svg');
-            console.log('how are you?')
             map.setView(center, 15);
-            // map.removeControl(route);
-
         });
         $('#eateries').on('click',function(){
             $('.button').removeClass('hovered');
@@ -443,7 +434,6 @@ $(function() {
             group.clearLayers();
             google(gEatURL,'marker-food.svg');
             map.setView(center, 15);
-            // route.remove();
         });
         $('#nightlife').on('click',function(){
             $('.button').removeClass('hovered');
